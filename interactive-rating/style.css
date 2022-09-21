@@ -1,0 +1,223 @@
+:root {
+    --ff: 'Overpass', sans-serif;
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --fs: 0.9375rem;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    text-align: left;
+    margin: 0 auto;
+    min-height: 100vh;
+
+    font-size: var(--fs);
+    font-family: var(--ff);
+    font-weight: var(--fw-400);
+    line-height: 1.625em;
+
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Light-Grey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+}
+
+h1 {
+    color: var(--White);
+}
+
+form {
+    margin-top: .5rem;
+}
+
+ul {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+    background-color: hsla(213, 19%, 25%);
+
+    width: 2.625rem;
+    text-align: center;
+    display: flex;
+    border-radius: 100%;
+    list-style: none;
+}
+
+ul .number {
+    border-style: none;
+    flex: 1;
+    line-height: 2.625rem;
+    /* center text in container height = line-height */
+    text-decoration: none;
+    color: var(--Light-Grey);
+    border-radius: 100%;
+}
+
+ul .number:hover {
+    border-radius: 100%;
+    color: var(--White);
+    background-color: var(--Orange);
+    cursor: pointer;
+}
+
+ul .visited {
+    color: var(--White);
+    background-color: var(--Light-Grey);
+    /* add the class to a visited link */
+    border-radius: 100%;
+}
+
+
+.card {
+    margin: 0 auto;
+    width: clamp(20.4375rem, calc(20.4375rem + ((1vw - 0.21875rem) * 7.7982)), 25.75rem);
+    height: clamp(360px, calc(22.5rem + ((1vw - 3.5px) * 5.1376)), 416px);
+    background-color: var(--Dark-Blue);
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 5rem;
+    position: relative;
+}
+
+button {
+    font-weight: var(--fw-700);
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.4rem;
+    border-style: none;
+    height: 2.8125rem;
+    color: var(--White);
+    background-color: var(--Orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.submit:hover {
+    cursor: pointer;
+    color: var(--Orange);
+    background-color: var(--White);
+}
+
+.icon {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: hsla(213, 19%, 25%);
+}
+
+header img {   /* reset img */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.result-card {
+    padding-top: 2.125rem;
+    padding-bottom: 2.29rem;
+    text-align: center;
+}
+
+.acknowledgments {
+    margin-top: 0.625rem;
+}
+
+.header-rating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    width: 10.5rem;
+}
+
+figcaption {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--Orange);
+    background-color: hsla(213, 19%, 25%);
+    border-radius: 1rem;
+}
+
+.bye {
+    font-size: xx-large;
+    line-height: 3rem;
+}
+
+@media(min-width: 48em) {
+    .card {
+        padding: 2rem;
+        padding-top: 6.875rem;
+    }
+
+    .result-card {
+        padding: 2rem;
+        padding-top: 2.8125rem;
+        padding-bottom: 2.8125rem;
+    }
+
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        top: 7%;
+        left: 7%;   
+    }
+
+    figure {
+        width: 12rem;
+    }
+
+    figcaption {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
